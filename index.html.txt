@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Madhusree Mitra - Academic & Research CV</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Dr. Madhusree Mitra</h1>
+        <p class="subtitle">Metabolomics & Plant Cell Wall Biology Researcher</p>
+        <div class="contact-info">
+            <a href="mailto:Madhusree.mitra29@gmail.com">Email</a>
+            <a href="https://scholar.google.com" target="_blank">Google Scholar</a>
+            <a href="https://orcid.org/0000-0002-8653-8770" target="_blank">ORCID: 0000-0002-8653-8770</a>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#profile">Profile</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#publications">Publications</a>
+        <a href="#leadership">Leadership</a>
+    </nav>
+
+    <div class="container">
+
+        <section id="profile">
+            <h2>Research Profile</h2>
+            <p>Plant and algal biochemist specializing in metabolomics, lipidomics and mass spectrometry applied to cell walls, microalgal biorefinery and renewable resources. Expertise in targeted and untargeted LC-MS/GC-MS workflows, multivariate data analysis and protocol development for cuticle, suberin and wood lipid characterization. Research spans microalgal omega-3 production, biofuel processes and biomass valorisation to recent work on xylan modification, lignin-carbohydrate linkages, and wood recalcitrance.</p>
+        </section>
+
+        <section id="experience">
+            <h2>Research Experience</h2>
+            
+            <div class="item">
+                <div class="item-header">
+                    <h3>Postdoctoral Researcher</h3>
+                    <span class="date">2021 - 2026</span>
+                </div>
+                <p class="institution">Swedish University of Agricultural Sciences (SLU), Department of Forest Genetics and Plant Physiology</p>
+                <ul>
+                    <li>Standardized methods for qualitative and quantitative analysis of hydrophobic cell wall components (cuticle, suberin, wood lipids).</li>
+                    <li>Investigated roles of homogalacturonan and xylan modifications in cuticle and wood formation, contributing to improved growth and saccharification in <em>Populus</em>.</li>
+                    <li>Co-authored multiple articles in high-impact journals including <em>New Phytologist</em> and <em>Plant Biotechnology Journal</em>.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <h3>UGC-Dr. D. S. Kothari Postdoctoral Fellow</h3>
+                    <span class="date">2020 - 2021</span>
+                </div>
+                <p class="institution">Institute of Chemical Technology, Department of Food Engineering and Technology</p>
+                <ul>
+                    <li>Utilized oleaginous yeast for biofuel production using waste derived from the brewery and bakery industry.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <h3>Research Associate</h3>
+                    <span class="date">2019 - 2020</span>
+                </div>
+                <p class="institution">CSIR-Central Salt and Marine Chemicals Research Institute, Division of Applied Phycology</p>
+                <ul>
+                    <li>Generated energy from microalgal feedstock through CO₂ capture from flue gases and studied carbon sequestration.</li>
+                    <li>Characterized high-value products such as omega-3 fatty acids and carotenoids.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Research Skills & Methods</h2>
+            
+            <div class="skills-category">
+                <h3>Metabolomics & Analytical Workflows</h3>
+                <ul class="skills-tags">
+                    <li>LC-MS / GC-MS</li>
+                    <li>HPLC</li>
+                    <li>Lipid Extraction</li>
+                    <li>Pyrolysis GC-MS</li>
+                    <li>Cuticle/Suberin Analysis</li>
+                    <li>UV-Vis / Fluorescence Spectroscopy</li>
+                </ul>
+            </div>
+
+            <div class="skills-category">
+                <h3>Bioprocess & Software</h3>
+                <ul class="skills-tags">
+                    <li>Photobioreactors</li>
+                    <li>Upstream/Downstream Optimization</li>
+                    <li>SIMCA</li>
+                    <li>JMP</li>
+                    <li>XLSTAT</li>
+                    <li>Design Expert</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="publications">
+            <h2>Selected Publications & Patents</h2>
+            
+            <div class="patent-box">
+                <strong>Patent:</strong> Antivirulence formulation from microalgal lipids against Enteropathogenic bacteria and method of preparation thereof. <em>(IN201911011645)</em>
+            </div>
+
+            <ul class="pub-list">
+                <li>Derba-Maceluch M., ... <strong>Mitra M.</strong>, et al. (2025). Glucuronoyl Esterase Expressed in Aspen Xylem Affects γ-Ester Linkages Between Lignin and Glucuronoxylan. <em>Plant Biotechnology Journal</em>. (I.F. 10.5)</li>
+                <li>Sivan P., ... <strong>Mitra M.</strong>, et al. (2024). Modification of xylan in secondary walls alters cell wall biosynthesis. <em>Plant Biotechnology Journal</em>. (I.F. 10.5)</li>
+                <li>Derba-Maceluch M., <strong>Mitra M.</strong>, et al. (2023). Xylan glucuronic acid side chains fix suberin-like aliphatic compounds to wood cell walls. <em>New Phytologist</em>. (I.F. 8.1)</li>
+                <li><strong>Mitra M.</strong>, & Mishra S. (2019). Multiproduct biorefinery from Arthrospira spp. towards zero waste. <em>Bioresource Technology</em>. (I.F. 9.0)</li>
+            </ul>
+        </section>
+
+        <section id="leadership">
+            <h2>Scientific Leadership & Outreach</h2>
+            <div class="item">
+                <div class="item-header">
+                    <h3>Umeå Postdoc Society (UPS)</h3>
+                    <span class="date">2023 - 2025</span>
+                </div>
+                <p><strong>President (2024-2025)</strong>, Vice-President (2023-2024), and Chair of the Career Development Office. Led community building, career advocacy, and professional development programs for international postdocs.</p>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <h3>SLU Postdoc Association (SLUPA) & SNPA</h3>
+                    <span class="date">2023 - Present</span>
+                </div>
+                <p><strong>Chair (2023-2024)</strong> for SLUPA and Board Member for the Swedish Network of Postdoc Associations (SNPA).</p>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <h3>Science Communication & Public Outreach</h3>
+                    <span class="date">2023 - 2026</span>
+                </div>
+                <p>City-Coordinator and Event Manager for <em>Pint of Science</em> Umeå (2023-2025) and Invited Speaker (2026). Presenter at <em>Forskarfredag</em> (2023-2025).</p>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Dr. Madhusree Mitra. All Rights Reserved. Built with Semantic HTML5 & CSS3.</p>
+    </footer>
+
+</body>
+</html>
