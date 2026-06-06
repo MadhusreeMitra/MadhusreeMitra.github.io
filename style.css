@@ -1,10 +1,9 @@
 :root {
-    --editorial-bg: #fbfbf9;      /* Warm premium paper-tint background */
-    --ink-dark: #1c2321;          /* Dark charcoal ink color */
-    --ink-muted: #53625f;         /* Elegant slate gray for subtext */
-    --spruce-accent: #1b3a2b;     /* Distinct deep forest spruce green */
-    --sage-tint: #e8f0ec;         /* Light background highlight rule */
-    --border-soft: #e1e6e3;       /* Delicate divider stroke lines */
+    --bg-canvas: #fafafa;         /* Ultra-clean concrete canvas white */
+    --ink-dark: #111111;          /* Jet black body color */
+    --ink-gray: #555555;          /* Corporate cool slate grey */
+    --slate-accent: #2c3e50;      /* Midnight slate anchor tone */
+    --border-grid: #e2e2e2;       /* Subtle bounding layout lines */
 }
 
 * {
@@ -14,70 +13,62 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, sans-serif;
-    background-color: var(--editorial-bg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    background-color: var(--bg-canvas);
     color: var(--ink-dark);
-    line-height: 1.75;
+    line-height: 1.6;
     letter-spacing: -0.01em;
 }
 
-/* Base Two-Column Distribution Setup */
-.editorial-container {
+/* Master Fixed Two-Column System Grid */
+.canvas-container {
     display: flex;
     min-height: 100vh;
 }
 
-/* Left Sidebar Frame Styles */
-.left-frame {
-    width: 350px;
-    border-right: 1px solid var(--border-soft);
-    padding: 60px 40px;
-    background-color: #f4f4f0;   /* Distinct matte ivory sidebar base */
+/* Dashboard Left Column Panel */
+.profile-deck {
+    width: 340px;
+    background-color: #f4f4f4;     /* Uniform professional gray board */
+    border-right: 1px solid var(--border-grid);
+    padding: 50px 35px;
 }
 
-.sticky-wrapper {
+.deck-sticky {
     position: sticky;
-    top: 60px;
+    top: 50px;
 }
 
-.brand-block h1 {
-    font-family: 'Georgia', serif;
-    font-size: 2rem;
-    font-weight: 400;
+.identity-badge h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
     line-height: 1.15;
-    color: var(--spruce-accent);
-    margin-bottom: 12px;
+    color: var(--slate-accent);
 }
 
-.academic-title {
+.field-focus {
     font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    font-weight: 600;
-    color: var(--ink-muted);
+    color: var(--ink-gray);
+    margin-top: 6px;
+    font-weight: 500;
 }
 
-.field-subtext {
-    font-size: 0.85rem;
-    color: var(--ink-muted);
-    margin-top: 8px;
-    font-style: italic;
-}
-
-.meta-block {
+.contact-card {
     margin-top: 40px;
 }
 
 .meta-label {
     font-size: 0.75rem;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.08em;
     font-weight: 700;
-    color: var(--ink-muted);
-    margin-bottom: 8px;
+    color: #999999;
+    display: block;
+    margin-bottom: 10px;
 }
 
-.meta-link {
+.deck-link {
     display: block;
     color: var(--ink-dark);
     text-decoration: none;
@@ -87,264 +78,250 @@ body {
     width: max-content;
 }
 
-.meta-link:hover {
-    border-color: var(--spruce-accent);
-    color: var(--spruce-accent);
+.deck-link:hover {
+    color: var(--slate-accent);
+    border-color: var(--slate-accent);
 }
 
 /* Navigation Links */
-.editorial-nav {
+.deck-nav {
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
+    margin-top: 60px;
     gap: 12px;
 }
 
-.editorial-nav a {
+.deck-nav a {
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: var(--ink-muted);
+    color: var(--ink-gray);
     text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s;
+    font-weight: 600;
+    transition: color 0.15s;
 }
 
-.editorial-nav a:hover {
-    color: var(--spruce-accent);
+.deck-nav a:hover {
+    color: var(--slate-accent);
 }
 
-/* Right Main Chronicle Canvas Frame */
-.right-frame {
+/* Right Content Canvas Area */
+.data-stream {
     flex: 1;
-    padding: 80px 80px 120px 80px;
+    padding: 60px 60px 100px 60px;
     max-width: 950px;
+    background-color: #ffffff;
 }
 
-section {
-    position: relative;
-    padding-top: 20px;
-    margin-bottom: 70px;
+.stream-block {
+    margin-bottom: 65px;
 }
 
-.section-index {
-    font-family: 'Georgia', serif;
-    font-size: 0.9rem;
-    color: var(--ink-muted);
-    display: block;
-    margin-bottom: 6px;
-    font-style: italic;
-}
-
-section h2 {
-    font-family: 'Georgia', serif;
-    font-size: 1.8rem;
-    font-weight: 400;
-    color: var(--spruce-accent);
-    margin-bottom: 30px;
-    padding-bottom: 12px;
+.stream-block h2 {
+    font-size: 1.35rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    color: var(--slate-accent);
+    margin-bottom: 25px;
+    padding-bottom: 8px;
     border-bottom: 1px solid var(--ink-dark);
 }
 
-.lead-paragraph {
-    font-family: 'Georgia', serif;
-    font-size: 1.15rem;
-    color: #2c3532;
-    line-height: 1.8;
+.summary-text {
+    font-size: 1rem;
+    color: #222222;
+    line-height: 1.65;
 }
 
-/* Log-Style Timeline Entries */
-.log-entry {
+/* Chronological Row Timeline Entries */
+.history-node {
     display: flex;
-    margin-bottom: 35px;
-    padding-bottom: 25px;
-    border-bottom: 1px dashed var(--border-soft);
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-grid);
 }
 
-.log-meta {
+.node-time {
     width: 140px;
     font-size: 0.9rem;
     font-weight: 700;
-    color: var(--spruce-accent);
+    color: var(--slate-accent);
     flex-shrink: 0;
 }
 
-.log-details {
+.node-content {
     flex: 1;
 }
 
-.log-details h3 {
-    font-family: 'Georgia', serif;
-    font-size: 1.25rem;
-    font-weight: 400;
-    margin-bottom: 4px;
+.node-content h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 2px;
 }
 
-.institution {
+.location-org {
     font-weight: 600;
     font-size: 0.95rem;
+    color: var(--ink-dark);
 }
 
-.sub-institution {
+.location-dept {
     font-size: 0.85rem;
-    color: var(--ink-muted);
+    color: var(--ink-gray);
     margin-bottom: 12px;
 }
 
-.bullet-list {
-    margin-left: 18px;
+.clean-bullets {
+    margin-left: 15px;
 }
 
-.bullet-list li {
+.clean-bullets li {
     margin-bottom: 6px;
     font-size: 0.95rem;
-    color: #2c3532;
+    color: #333333;
 }
 
-/* Education Layout */
-.edu-item {
-    margin-bottom: 30px;
+/* Academic Block Formatting */
+.edu-node {
+    margin-bottom: 25px;
 }
 
-.edu-item h3 {
-    font-family: 'Georgia', serif;
-    font-size: 1.2rem;
-    font-weight: 400;
+.edu-node h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
 }
 
-.degree-line {
+.credential {
     font-weight: 600;
     font-size: 0.95rem;
-    color: var(--spruce-accent);
+    color: var(--slate-accent);
 }
 
-.meta-line, .abstract-line {
-    font-size: 0.9rem;
-    color: var(--ink-muted);
+.marks, .thesis-title {
+    font-size: 0.85rem;
+    color: var(--ink-gray);
 }
 
-.subsection-title {
-    font-family: 'Georgia', serif;
-    font-size: 1.2rem;
-    font-weight: 400;
+.stream-subtitle {
+    font-size: 1.05rem;
+    font-weight: 700;
     margin: 35px 0 15px 0;
-    color: var(--spruce-accent);
+    color: var(--slate-accent);
 }
 
-/* Methodologies Clean Minimal Layout */
-.methods-layout {
+/* Flat Grid Matrix for Capabilities */
+.flex-matrix {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    gap: 25px;
 }
 
-.method-category {
+.matrix-cell {
     padding-bottom: 15px;
-    border-bottom: 1px solid var(--border-soft);
+    border-bottom: 1px solid var(--border-grid);
 }
 
-.method-category h4 {
-    font-size: 0.95rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--spruce-accent);
-    margin-bottom: 6px;
-}
-
-.method-category p {
+.matrix-cell h4 {
     font-size: 0.9rem;
-    color: var(--ink-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--slate-accent);
+    margin-bottom: 4px;
 }
 
-/* Bibliography & IP Framework Layout */
-.patent-callout {
-    background-color: var(--sage-tint);
-    padding: 20px;
-    border-left: 2px solid var(--spruce-accent);
-    margin-bottom: 40px;
-    font-size: 0.95rem;
+.matrix-cell p {
+    font-size: 0.85rem;
+    color: var(--ink-gray);
 }
 
-.callout-tag {
+/* Bibliography & IP Streams */
+.ip-strip {
+    background-color: #fafafa;
+    padding: 16px;
+    border-left: 3px solid var(--slate-accent);
+    margin-bottom: 35px;
+    font-size: 0.9rem;
+}
+
+.strip-label {
     font-size: 0.7rem;
     text-transform: uppercase;
     font-weight: 700;
-    letter-spacing: 0.05em;
-    color: var(--spruce-accent);
+    color: var(--slate-accent);
     display: block;
     margin-bottom: 4px;
 }
 
-.bibliography-list, .numbered-bibliography {
+.biblio-stream, .biblio-stream-numbered {
     font-size: 0.95rem;
-    margin-left: 20px;
+    margin-left: 15px;
 }
 
-.bibliography-list li, .numbered-bibliography li {
-    margin-bottom: 14px;
-    line-height: 1.65;
+.biblio-stream li, .biblio-stream-numbered li {
+    margin-bottom: 12px;
+    line-height: 1.6;
 }
 
-/* Presentation Layout */
-.presentation-block {
+/* Dissemination Row Blocks */
+.talk-node {
     display: flex;
-    gap: 20px;
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid var(--border-soft);
+    gap: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed var(--border-grid);
 }
 
-.presentation-year {
-    font-size: 0.9rem;
+.talk-time {
+    font-size: 0.85rem;
     font-weight: 700;
-    color: var(--spruce-accent);
-    width: 50px;
+    color: var(--slate-accent);
+    width: 45px;
     flex-shrink: 0;
 }
 
-.presentation-text {
-    font-size: 0.95rem;
+.talk-content {
+    font-size: 0.9rem;
 }
 
-/* Leadership and Outreach Nodes */
-.governance-node {
-    margin-bottom: 30px;
+/* Leadership Nodes */
+.gov-node {
+    margin-bottom: 25px;
 }
 
-.governance-node h3 {
-    font-family: 'Georgia', serif;
-    font-size: 1.15rem;
-    font-weight: 400;
-    margin-bottom: 10px;
+.gov-node h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 8px;
 }
 
-.editorial-footer {
-    margin-top: 100px;
+.stream-footer {
+    margin-top: 80px;
     padding-top: 20px;
-    border-top: 1px solid var(--border-soft);
+    border-top: 1px solid var(--border-grid);
     font-size: 0.8rem;
-    color: var(--ink-muted);
+    color: var(--ink-gray);
 }
 
-/* Media Breakpoint Query adjustments for smaller phone screens */
+/* Desktop Responsive Layout Engine Adjustments */
 @media (max-width: 900px) {
-    .editorial-container {
+    .canvas-container {
         flex-direction: column;
     }
-    .left-frame {
+    .profile-deck {
         width: 100%;
         border-right: none;
-        border-bottom: 1px solid var(--border-soft);
-        padding: 40px 30px;
+        border-bottom: 1px solid var(--border-grid);
+        padding: 35px 25px;
     }
-    .sticky-wrapper {
+    .deck-sticky {
         position: relative;
         top: 0;
     }
-    .right-frame {
-        padding: 50px 25px;
+    .data-stream {
+        padding: 40px 20px;
     }
-    .methods-layout {
+    .flex-matrix {
         grid-template-columns: 1fr;
     }
 }
