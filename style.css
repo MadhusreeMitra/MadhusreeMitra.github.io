@@ -20,18 +20,20 @@ body {
     letter-spacing: -0.01em;
 }
 
-/* Master Fixed Two-Column System Grid */
+/* Master Fixed Flex Container System */
 .canvas-container {
     display: flex;
     min-height: 100vh;
+    width: 100%;
 }
 
-/* Dashboard Left Column Panel */
+/* Dashboard Left Column Panel — Locked to a compact, neat width */
 .profile-deck {
-    width: 340px;
-    background-color: #f4f4f4;     /* Uniform professional gray board */
+    width: 280px;                 /* Squeezed and made strictly narrow */
+    background-color: #f4f4f4;     
     border-right: 1px solid var(--border-grid);
-    padding: 50px 35px;
+    padding: 50px 25px;           /* Cleaner, tighter padding */
+    flex-shrink: 0;               /* Strictly prevents the sidebar from stretching */
 }
 
 .deck-sticky {
@@ -40,15 +42,15 @@ body {
 }
 
 .identity-badge h1 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;            /* Tighter, more elegant header size */
     font-weight: 700;
     letter-spacing: -0.02em;
-    line-height: 1.15;
+    line-height: 1.2;
     color: var(--slate-accent);
 }
 
 .field-focus {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: var(--ink-gray);
     margin-top: 6px;
     font-weight: 500;
@@ -59,7 +61,7 @@ body {
 }
 
 .meta-label {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     text-transform: uppercase;
     letter-spacing: 0.08em;
     font-weight: 700;
@@ -72,10 +74,11 @@ body {
     display: block;
     color: var(--ink-dark);
     text-decoration: none;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     margin-bottom: 6px;
     border-bottom: 1px solid transparent;
     width: max-content;
+    white-space: nowrap;          /* Prevents ugly line breaks in links */
 }
 
 .deck-link:hover {
@@ -87,12 +90,12 @@ body {
 .deck-nav {
     display: flex;
     flex-direction: column;
-    margin-top: 60px;
+    margin-top: 50px;
     gap: 12px;
 }
 
 .deck-nav a {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     color: var(--ink-gray);
@@ -105,11 +108,11 @@ body {
     color: var(--slate-accent);
 }
 
-/* Right Content Canvas Area */
+/* Right Content Canvas Area — Rigidly bounded to stop spreading */
 .data-stream {
     flex: 1;
-    padding: 60px 60px 100px 60px;
-    max-width: 950px;
+    padding: 60px 80px 100px 60px;
+    max-width: 800px;              /* FIX: Strictly clamps the text column so it cannot stretch out */
     background-color: #ffffff;
 }
 
@@ -118,7 +121,7 @@ body {
 }
 
 .stream-block h2 {
-    font-size: 1.35rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     font-weight: 700;
@@ -129,7 +132,7 @@ body {
 }
 
 .summary-text {
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: #222222;
     line-height: 1.65;
 }
@@ -143,8 +146,8 @@ body {
 }
 
 .node-time {
-    width: 140px;
-    font-size: 0.9rem;
+    width: 120px;                 /* Made narrower to fit the clean layout */
+    font-size: 0.85rem;
     font-weight: 700;
     color: var(--slate-accent);
     flex-shrink: 0;
@@ -155,7 +158,7 @@ body {
 }
 
 .node-content h3 {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     font-weight: 700;
     margin-bottom: 2px;
 }
@@ -178,7 +181,7 @@ body {
 
 .clean-bullets li {
     margin-bottom: 6px;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     color: #333333;
 }
 
@@ -188,7 +191,7 @@ body {
 }
 
 .edu-node h3 {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     font-weight: 700;
 }
 
@@ -204,7 +207,7 @@ body {
 }
 
 .stream-subtitle {
-    font-size: 1.05rem;
+    font-size: 1rem;
     font-weight: 700;
     margin: 35px 0 15px 0;
     color: var(--slate-accent);
@@ -223,7 +226,7 @@ body {
 }
 
 .matrix-cell h4 {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.04em;
     color: var(--slate-accent);
@@ -235,26 +238,8 @@ body {
     color: var(--ink-gray);
 }
 
-/* Bibliography & IP Streams */
-.ip-strip {
-    background-color: #fafafa;
-    padding: 16px;
-    border-left: 3px solid var(--slate-accent);
-    margin-bottom: 35px;
-    font-size: 0.9rem;
-}
-
-.strip-label {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: var(--slate-accent);
-    display: block;
-    margin-bottom: 4px;
-}
-
 .biblio-stream, .biblio-stream-numbered {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     margin-left: 15px;
 }
 
@@ -290,7 +275,7 @@ body {
 }
 
 .gov-node h3 {
-    font-size: 1.05rem;
+    font-size: 1rem;
     font-weight: 700;
     margin-bottom: 8px;
 }
@@ -303,7 +288,7 @@ body {
     color: var(--ink-gray);
 }
 
-/* Desktop Responsive Layout Engine Adjustments */
+/* Responsive Layout Engine Adjustments for Mobile Devices */
 @media (max-width: 900px) {
     .canvas-container {
         flex-direction: column;
@@ -320,6 +305,7 @@ body {
     }
     .data-stream {
         padding: 40px 20px;
+        max-width: 100%;
     }
     .flex-matrix {
         grid-template-columns: 1fr;
