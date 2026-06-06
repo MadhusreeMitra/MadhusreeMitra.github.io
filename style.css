@@ -1,10 +1,10 @@
-/* Color Palette & Custom Variable Definitions */
 :root {
-    --primary-color: #243e56;   /* Deep Academic Slate Blue */
-    --secondary-color: #2e6f40; /* Soft Bio/Plant Green Accent */
-    --text-dark: #2d3748;       /* Charcoal for high-readability text */
-    --bg-light: #f4f6f8;        /* Soft gray background */
-    --card-bg: #ffffff;         /* Pure white container content background */
+    --editorial-bg: #fbfbf9;      /* Warm premium paper-tint background */
+    --ink-dark: #1c2321;          /* Dark charcoal ink color */
+    --ink-muted: #53625f;         /* Elegant slate gray for subtext */
+    --spruce-accent: #1b3a2b;     /* Distinct deep forest spruce green */
+    --sage-tint: #e8f0ec;         /* Light background highlight rule */
+    --border-soft: #e1e6e3;       /* Delicate divider stroke lines */
 }
 
 * {
@@ -14,205 +14,337 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: var(--bg-light);
-    color: var(--text-dark);
-    line-height: 1.7;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, sans-serif;
+    background-color: var(--editorial-bg);
+    color: var(--ink-dark);
+    line-height: 1.75;
+    letter-spacing: -0.01em;
 }
 
-/* Header Component */
-header {
-    background: linear-gradient(135deg, var(--primary-color), #1a2e40);
-    color: white;
-    text-align: center;
-    padding: 50px 20px;
-}
-
-header h1 {
-    font-size: 2.8rem;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-}
-
-header .subtitle {
-    font-size: 1.25rem;
-    color: #cbd5e0;
-    margin-top: 5px;
-    font-weight: 300;
-}
-
-.contact-info {
-    margin-top: 20px;
-}
-
-.contact-info a {
-    color: #63b3ed;
-    text-decoration: none;
-    margin: 0 12px;
-    font-size: 0.95rem;
-    border-bottom: 1px dashed transparent;
-    transition: border-color 0.2s;
-}
-
-.contact-info a:hover {
-    border-color: #63b3ed;
-}
-
-/* Sticky Navigation bar */
-nav {
-    background-color: #1a202c;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+/* Base Two-Column Distribution Setup */
+.editorial-container {
     display: flex;
-    justify-content: center;
-    padding: 12px 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    min-height: 100vh;
 }
 
-nav a {
-    color: #e2e8f0;
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 600;
+/* Left Sidebar Frame Styles */
+.left-frame {
+    width: 350px;
+    border-right: 1px solid var(--border-soft);
+    padding: 60px 40px;
+    background-color: #f4f4f0;   /* Distinct matte ivory sidebar base */
+}
+
+.sticky-wrapper {
+    position: sticky;
+    top: 60px;
+}
+
+.brand-block h1 {
+    font-family: 'Georgia', serif;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.15;
+    color: var(--spruce-accent);
+    margin-bottom: 12px;
+}
+
+.academic-title {
+    font-size: 0.85rem;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin: 0 15px;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+    color: var(--ink-muted);
+}
+
+.field-subtext {
+    font-size: 0.85rem;
+    color: var(--ink-muted);
+    margin-top: 8px;
+    font-style: italic;
+}
+
+.meta-block {
+    margin-top: 40px;
+}
+
+.meta-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    color: var(--ink-muted);
+    margin-bottom: 8px;
+}
+
+.meta-link {
+    display: block;
+    color: var(--ink-dark);
+    text-decoration: none;
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+    border-bottom: 1px solid transparent;
+    width: max-content;
+}
+
+.meta-link:hover {
+    border-color: var(--spruce-accent);
+    color: var(--spruce-accent);
+}
+
+/* Navigation Links */
+.editorial-nav {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    gap: 12px;
+}
+
+.editorial-nav a {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--ink-muted);
+    text-decoration: none;
+    font-weight: 500;
     transition: color 0.2s;
 }
 
-nav a:hover {
-    color: #63b3ed;
+.editorial-nav a:hover {
+    color: var(--spruce-accent);
 }
 
-/* Layout Container */
-.container {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 0 20px;
+/* Right Main Chronicle Canvas Frame */
+.right-frame {
+    flex: 1;
+    padding: 80px 80px 120px 80px;
+    max-width: 950px;
 }
 
-/* Content Blocks */
 section {
-    background: var(--card-bg);
-    border-radius: 8px;
-    padding: 35px;
-    margin-bottom: 25px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.02), 0 1px 3px rgba(0,0,0,0.05);
+    position: relative;
+    padding-top: 20px;
+    margin-bottom: 70px;
+}
+
+.section-index {
+    font-family: 'Georgia', serif;
+    font-size: 0.9rem;
+    color: var(--ink-muted);
+    display: block;
+    margin-bottom: 6px;
+    font-style: italic;
 }
 
 section h2 {
-    color: var(--primary-color);
-    font-size: 1.6rem;
-    border-bottom: 2px solid #e2e8f0;
-    padding-bottom: 8px;
-    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--spruce-accent);
+    margin-bottom: 30px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--ink-dark);
 }
 
-/* Experience & Item Listings */
-.item {
-    margin-bottom: 25px;
-    padding-bottom: 20px;
-    border-bottom: 1px dashed #e2e8f0;
+.lead-paragraph {
+    font-family: 'Georgia', serif;
+    font-size: 1.15rem;
+    color: #2c3532;
+    line-height: 1.8;
 }
 
-.item:last-child {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    border-bottom: none;
-}
-
-.item-header {
+/* Log-Style Timeline Entries */
+.log-entry {
     display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    flex-wrap: wrap;
+    margin-bottom: 35px;
+    padding-bottom: 25px;
+    border-bottom: 1px dashed var(--border-soft);
 }
 
-.item h3 {
-    color: #2d3748;
-    font-size: 1.2rem;
+.log-meta {
+    width: 140px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--spruce-accent);
+    flex-shrink: 0;
+}
+
+.log-details {
+    flex: 1;
+}
+
+.log-details h3 {
+    font-family: 'Georgia', serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 4px;
 }
 
 .institution {
-    color: var(--secondary-color);
     font-weight: 600;
     font-size: 0.95rem;
-    margin-bottom: 10px;
 }
 
-.date {
+.sub-institution {
+    font-size: 0.85rem;
+    color: var(--ink-muted);
+    margin-bottom: 12px;
+}
+
+.bullet-list {
+    margin-left: 18px;
+}
+
+.bullet-list li {
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+    color: #2c3532;
+}
+
+/* Education Layout */
+.edu-item {
+    margin-bottom: 30px;
+}
+
+.edu-item h3 {
+    font-family: 'Georgia', serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.degree-line {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--spruce-accent);
+}
+
+.meta-line, .abstract-line {
     font-size: 0.9rem;
-    color: #718096;
-    font-weight: 500;
+    color: var(--ink-muted);
 }
 
-ul {
-    list-style-type: square;
-    margin-left: 20px;
+.subsection-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 35px 0 15px 0;
+    color: var(--spruce-accent);
 }
 
-li {
+/* Methodologies Clean Minimal Layout */
+.methods-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.method-category {
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-soft);
+}
+
+.method-category h4 {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--spruce-accent);
     margin-bottom: 6px;
 }
 
-/* Skills/Tags Display */
-.skills-category {
-    margin-bottom: 20px;
+.method-category p {
+    font-size: 0.9rem;
+    color: var(--ink-muted);
 }
 
-.skills-category h3 {
-    font-size: 1.05rem;
-    color: #4a5568;
+/* Bibliography & IP Framework Layout */
+.patent-callout {
+    background-color: var(--sage-tint);
+    padding: 20px;
+    border-left: 2px solid var(--spruce-accent);
+    margin-bottom: 40px;
+    font-size: 0.95rem;
+}
+
+.callout-tag {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--spruce-accent);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.bibliography-list, .numbered-bibliography {
+    font-size: 0.95rem;
+    margin-left: 20px;
+}
+
+.bibliography-list li, .numbered-bibliography li {
+    margin-bottom: 14px;
+    line-height: 1.65;
+}
+
+/* Presentation Layout */
+.presentation-block {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-soft);
+}
+
+.presentation-year {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--spruce-accent);
+    width: 50px;
+    flex-shrink: 0;
+}
+
+.presentation-text {
+    font-size: 0.95rem;
+}
+
+/* Leadership and Outreach Nodes */
+.governance-node {
+    margin-bottom: 30px;
+}
+
+.governance-node h3 {
+    font-family: 'Georgia', serif;
+    font-size: 1.15rem;
+    font-weight: 400;
     margin-bottom: 10px;
 }
 
-.skills-tags {
-    list-style: none;
-    margin-left: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+.editorial-footer {
+    margin-top: 100px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-soft);
+    font-size: 0.8rem;
+    color: var(--ink-muted);
 }
 
-.skills-tags li {
-    background-color: #edf2f7;
-    color: var(--primary-color);
-    padding: 4px 12px;
-    border-radius: 6px;
-    font-size: 0.85rem;
-    font-weight: 500;
-}
-
-/* Publications List & Patent Callout */
-.patent-box {
-    background-color: #f0fff4;
-    border-left: 4px solid var(--secondary-color);
-    padding: 12px 15px;
-    margin-bottom: 20px;
-    font-size: 0.95rem;
-    border-radius: 0 6px 6px 0;
-}
-
-.pub-list li {
-    margin-bottom: 15px;
-    font-size: 0.95rem;
-}
-
-/* Footer Element */
-footer {
-    text-align: center;
-    padding: 30px;
-    background-color: #1a202c;
-    color: #a0aec0;
-    font-size: 0.85rem;
-    margin-top: 60px;
-}
-
-/* Responsive Scaling for smaller phone screens */
-@media (max-width: 600px) {
-    header h1 { font-size: 2rem; }
-    .item-header { flex-direction: column; }
-    nav { flex-wrap: wrap; gap: 10px; }
-    section { padding: 20px; }
+/* Media Breakpoint Query adjustments for smaller phone screens */
+@media (max-width: 900px) {
+    .editorial-container {
+        flex-direction: column;
+    }
+    .left-frame {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--border-soft);
+        padding: 40px 30px;
+    }
+    .sticky-wrapper {
+        position: relative;
+        top: 0;
+    }
+    .right-frame {
+        padding: 50px 25px;
+    }
+    .methods-layout {
+        grid-template-columns: 1fr;
+    }
 }
